@@ -16,6 +16,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Auth::routes();
 
-Route::resource('students', 'StudentController');
-Route::resource('teachers', 'TeacherController');
+Route::get('/home', 'HomeController@index')->name('home');
