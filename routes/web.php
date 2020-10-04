@@ -21,3 +21,4 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::resource('products', 'ProductController')->middleware('auth');
+Route::resource('customers', 'CustomerController')->middleware('auth');
