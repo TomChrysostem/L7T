@@ -25,7 +25,7 @@ class ProductController extends Controller
      */
     public function create()
     {
-        //
+        return view('products.create');
     }
 
     /**
@@ -36,7 +36,13 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validatedData = $request->validate([
+            'name' => 'required|max:255',
+            'price' => 'required|numeric',
+        ]);
+        $show = Product::create($validatedData);
+   
+        return redirect('/products')->with('success', 'Product is successfully saved');
     }
 
     /**
@@ -58,7 +64,9 @@ class ProductController extends Controller
      */
     public function edit($id)
     {
-        //
+        $product = Product::findOrFail($id);
+
+        return view('products.edit', compact('product'));
     }
 
     /**
@@ -70,7 +78,13 @@ class ProductController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $validatedData = $request->validate([
+            'name' => 'required|max:255',
+            'price' => 'required|numeric',
+        ]);
+        Product::whereId($id)->update($validatedData);
+
+        return redirect('/products')->with('success', 'Update Data is successfully updated');
     }
 
     /**
@@ -81,6 +95,9 @@ class ProductController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $product = Product::findOrFail($id);
+        $product->delete();
+
+        return redirect('/products')->with('success', 'Corona Case Data is successfully deleted');
     }
 }
