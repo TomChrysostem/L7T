@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <nav class="navbar navbar-expand-sm navbar-dark text-white bg-secondary">
+    <nav class="navbar navbar-expand-sm navbar-dark text-white bg-secondary mt-1">
       <ul class="navbar-nav">
         <!-- <li class="nav-item">
           <router-link to="/" class="nav-link">Home</router-link>
@@ -12,7 +12,7 @@
           <router-link to="/posts" class="nav-link">Posts</router-link>
         </li>
       </ul>
-    </nav><br />
+    </nav>
     <transition name="fade">
       <router-view></router-view>
     </transition>

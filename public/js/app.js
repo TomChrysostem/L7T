@@ -1980,6 +1980,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -2011,6 +2012,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
 //
 //
 //
@@ -38467,7 +38469,7 @@ var render = function() {
         "nav",
         {
           staticClass:
-            "navbar navbar-expand-sm navbar-dark text-white bg-secondary"
+            "navbar navbar-expand-sm navbar-dark text-white bg-secondary mt-1"
         },
         [
           _c("ul", { staticClass: "navbar-nav" }, [
@@ -38486,7 +38488,6 @@ var render = function() {
           ])
         ]
       ),
-      _c("br"),
       _vm._v(" "),
       _c("transition", { attrs: { name: "fade" } }, [_c("router-view")], 1)
     ],
@@ -38515,7 +38516,7 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [
+  return _c("div", { staticClass: "jumbotron" }, [
     _c("h1", [_vm._v("Create A Post")]),
     _vm._v(" "),
     _c(
@@ -38590,21 +38591,30 @@ var render = function() {
         ]),
         _c("br"),
         _vm._v(" "),
-        _vm._m(0)
+        _c(
+          "div",
+          { staticClass: "form-group" },
+          [
+            _c("button", { staticClass: "btn btn-primary" }, [
+              _vm._v("Create")
+            ]),
+            _vm._v(" "),
+            _c(
+              "router-link",
+              {
+                staticClass: "btn btn-primary",
+                attrs: { to: { name: "posts" } }
+              },
+              [_vm._v("Back")]
+            )
+          ],
+          1
+        )
       ]
     )
   ])
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "form-group" }, [
-      _c("button", { staticClass: "btn btn-primary" }, [_vm._v("Create")])
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -38626,7 +38636,7 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [
+  return _c("div", { staticClass: "jumbotron" }, [
     _c("h1", [_vm._v("Edit Post")]),
     _vm._v(" "),
     _c(
@@ -38701,21 +38711,30 @@ var render = function() {
         ]),
         _c("br"),
         _vm._v(" "),
-        _vm._m(0)
+        _c(
+          "div",
+          { staticClass: "form-group" },
+          [
+            _c("button", { staticClass: "btn btn-primary" }, [
+              _vm._v("Update")
+            ]),
+            _vm._v(" "),
+            _c(
+              "router-link",
+              {
+                staticClass: "btn btn-primary",
+                attrs: { to: { name: "posts" } }
+              },
+              [_vm._v("Back")]
+            )
+          ],
+          1
+        )
       ]
     )
   ])
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "form-group" }, [
-      _c("button", { staticClass: "btn btn-primary" }, [_vm._v("Update")])
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -38780,7 +38799,7 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [
+  return _c("div", { staticClass: "jumbotron" }, [
     _c("h1", [_vm._v("Posts")]),
     _vm._v(" "),
     _c("div", { staticClass: "row" }, [

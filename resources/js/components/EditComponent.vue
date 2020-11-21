@@ -1,7 +1,7 @@
 // EditComponent.vue
 
 <template>
-  <div>
+  <div class="jumbotron">
     <h1>Edit Post</h1>
     <form @submit.prevent="updatePost">
       <div class="row">
@@ -22,6 +22,7 @@
         </div><br />
         <div class="form-group">
           <button class="btn btn-primary">Update</button>
+          <router-link :to="{ name: 'posts' }" class="btn btn-primary">Back</router-link>
         </div>
     </form>
   </div>

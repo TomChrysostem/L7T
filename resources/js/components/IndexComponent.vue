@@ -1,6 +1,6 @@
 // IndexComponent.vue
 <template>
-  <div>
+  <div class="jumbotron">
       <h1>Posts</h1>
         <div class="row">
           <div class="col-md-10"></div>

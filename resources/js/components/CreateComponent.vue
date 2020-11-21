@@ -1,7 +1,7 @@
 // CreatePost.vue
 
 <template>
-  <div>
+  <div class="jumbotron">
     <h1>Create A Post</h1>
     <form @submit.prevent="addPost">
       <div class="row">
@@ -22,6 +22,7 @@
         </div><br />
         <div class="form-group">
           <button class="btn btn-primary">Create</button>
+          <router-link :to="{ name: 'posts' }" class="btn btn-primary">Back</router-link>
         </div>
     </form>
   </div>
